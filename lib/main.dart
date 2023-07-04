@@ -6,10 +6,12 @@ void main() {
       backgroundColor: Colors.red,
       appBar: AppBar(
         title: Text("Dicee"),
+        centerTitle: true,
         backgroundColor: Colors.red,
       ),
       body: DicePage(),
     ),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -18,14 +20,19 @@ class DicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            flex: 3,
-            child: Image.asset("images/dice1.png"),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset("images/dice1.png"),
+            ),
           ),
           Expanded(
-            flex: 2,
-            child: Image.asset("images/dice1.png"),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset("images/dice1.png"),
+            ),
           ),
         ],
       ),
